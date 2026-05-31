@@ -1,0 +1,55 @@
+# v0 sandbox internal files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
+.vercel/
+next.user-config.*
+
+# Environment variables
+.env*.local
+
+# Common ignores
+node_modules
+.next/
+.DS_Store
+
+# ==============================
+# StreamSpeech Backend (Python)
+# ==============================
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+backend/venv/
+venv/
+env/
+
+# Temporary audio files
+backend/temp_audio/
+backend/static/audio/
+
+# Whisper / Torch cache (can be huge)
+*.pt
+*.bin
+
+# Logs
+*.log
+
+# ==============================
+# React/Vite extras
+# ==============================
+
+streamspeech/node_modules/
+streamspeech/dist/
+streamspeech/.vite/
+
+# ==============================
+# OS junk
+# ==============================
+Thumbs.db

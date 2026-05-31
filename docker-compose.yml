@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      WHISPER_MODEL: tiny
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+      PUBLIC_BASE_URL: http://localhost:8000
+      CORS_ORIGINS: "*"
+      DATABASE_PATH: data/analytics.db
+    volumes:
+      - ./backend/static:/app/static
+      - ./backend/data:/app/data
+      - ./backend/pretrained_models:/app/pretrained_models
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./streamspeech
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: http://localhost:8000
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
