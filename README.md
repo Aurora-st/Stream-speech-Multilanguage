@@ -37,16 +37,7 @@ StreamSpeech is a full-stack AI application that converts spoken language into t
 
 ## Screenshots
 
-> Capture screenshots and save to `screenshots/` — see [screenshots/README.md](screenshots/README.md).
-
-| Recorder | Dashboard | Pipeline |
-|---|---|---|
-| ![Recorder](screenshots/recorder-dark.png) | ![Dashboard](screenshots/dashboard.png) | ![Pipeline](screenshots/pipeline.png) |
-| Glassmorphism recorder with live waveform | Analytics with charts and history | 6-stage progress timeline |
-
-*Placeholder paths — add your screenshots to `screenshots/` folder.*
-
----
+Screenshots will be added in a future update.
 
 ## Architecture
 
