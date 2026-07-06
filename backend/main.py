@@ -95,7 +95,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+# Ensure static directory exists before mounting to prevent Starlette/FastAPI from crashing
+STATIC_DIR.mkdir(parents=True, exist_ok=True)
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
+
 
 
 @app.get("/")
